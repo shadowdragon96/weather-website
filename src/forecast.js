@@ -15,8 +15,7 @@ const forecast=({long,lat},callback)=>
         else
         {
             callback(undefined,
-                body.current.weather[0].description+' '+body.current.temp
-                
+                 body.current.weather[0].description+', It is '+body.current.temp+' degrees ' +' but it feels like it is '+body.current.feels_like+' degrees '
 
             )
         }
