@@ -3,6 +3,7 @@ const express=require('express')
 const hbs = require('hbs')
 const geocode=require('./src/geocode')
 const forecast=require('./src/forecast')
+const port =process.env.PORT || 3000
 //making paths
 const publicpath=path.join(__dirname,'./public')
 const templatespath=path.join(__dirname,'./templates/views')
@@ -94,6 +95,6 @@ app.get('*',(req,res)=>{
     })
 
 })
-app.listen(3000,()=>{
+app.listen(port,()=>{
     console.log("tada !")
 })
